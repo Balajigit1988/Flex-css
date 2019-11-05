@@ -1,0 +1,144 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Flex css</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container{
+        width:100%;
+        display: flex;
+        background: #6086dc;
+    }
+    .container div{ width:46%; margin:0 2%;}
+    @media screen and (max-width:767px){
+      .container{ display: block;}
+      .container div{ width:100%; margin:0;}
+    }
+    h1{ color:black; text-align: center;}
+    p{ display: block; margin-bottom: 0; margin-top:30px; font-size: 14px; font-weight: 700;}
+    ul{ margin:10px 0; padding:0; background: #f1f1f1; }
+    ul li { list-style: none; margin:10px; background: paleturquoise; padding:5px; text-align: center;}
+    .a{ display: flex;}   
+    .b{ display: flex;  justify-content: center; }
+    .c{ display: flex;  justify-content: flex-end;}
+    .d{ display: flex;  flex-direction: row-reverse;}
+    .e{ display: flex; justify-content: space-between;}
+    .f{ display: flex; justify-content: space-evenly;}
+    .g{ display: flex; flex-direction: column;}
+    .h{ display: flex; flex-direction: column-reverse; }
+    .a1{ display: flex; }
+    .a1 li:nth-child(2){ flex-grow: 1; }   
+    .b1{ display: flex; height: 150px; justify-content: center; align-items: center;}
+    .c1{ display: flex;}
+    .c1 .x{ order:2}
+    .c1 .y{ order:1}
+    .c1 .z{ order:3}
+    .d1{ display: flex; align-items: stretch;}
+    .e1{ display: flex; flex-wrap: wrap; justify-content: center;}
+  </style>
+</head>
+<body>
+  <h1>Element Adjust Using Flex Css (just add css on Respective Parent tag)</h1>
+  <div class="container">
+    <div >
+        <p>Horizontal (display: flex;)</p>
+        <ul class="a">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Center (display: flex;  justify-content: center; )</p>
+        <ul class="b">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Right (display: flex;  justify-content: flex-end;)</p>
+        <ul class="c">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Right Reverse (display: flex;  flex-direction: row-reverse; )</p>
+        <ul class="d">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Space between (display: flex; justify-content: space-between; )</p>
+        <ul class="e">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Space Evenly (display: flex; justify-content: space-evenly; )</p>
+        <ul class="f">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Vertical (display: flex; flex-direction: column; )</p>
+        <ul class="g">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Vertical Reverse (display: flex; flex-direction: column-reverse; )</p>
+        <ul class="h">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </div>
+    <div>
+        <p>Element Grow (Parent tag add - display: flex; Particular element add - flex-grow: 1; )</p>
+        <ul class="a1">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <p>Middle of the box (display: flex; justify-content: center; align-items: center; )</p>
+        <ul class="b1">
+            <li>One</li>
+        </ul>
+        <p>Order  (Parent tag add - display: flex; Particular element add - order: 1; )</p>
+        <ul class="c1">
+            <li class="x">One</li>
+            <li class="y">Two</li>
+            <li class="z">Three</li>
+        </ul>
+        <p>Stretch  (display: flex; align-items: stretch; )</p>
+        <ul class="d1">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three text will coming soon text will coming soon</li>
+            <li>Four</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+        <p>Wrap  (display: flex; flex-wrap: wrap; justify-content: center; )</p>
+        <ul class="e1">
+            <li style="width:80%">One</li>
+            <li style="width:40%">Two</li>
+            <li style="width:50%">Two</li>
+            <li style="width:20%">Three</li>
+            <li style="width:20%">Three</li>
+            <li style="width:20%">Three</li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>
